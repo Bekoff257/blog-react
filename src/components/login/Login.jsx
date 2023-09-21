@@ -1,8 +1,27 @@
 import React from 'react'
+import { Input } from '../../ui'
+import { useState } from 'react'
 
 function Login() {
+
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
   return (
-    <div>Login</div>
+    <div className='text-center mt-5'>
+      <main class="form-signin w-25 m-auto">
+    <form>
+      <h1>Beemy</h1>
+      <h1 class="h3 mb-3 fw-normal">Please login</h1>
+
+      <Input label={"name@example.com"} state={email} setState={setEmail}/>
+      <Input label={"Password"} type={'password'} state={password} setState={setPassword}/>
+
+
+      <button class="btn btn-primary w-100 py-2 mt-2" type="submit">Login</button>
+    </form>
+  </main>
+    </div>
   )
 }
 
